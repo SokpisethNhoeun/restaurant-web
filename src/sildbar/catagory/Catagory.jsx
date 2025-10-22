@@ -1,6 +1,6 @@
 import React from "react";
 import "./Catagory.css";
-import Input from "../../components/input";
+import Input from "../../components/Input.jsx";
 function Catagory({handleChange}) {
  
   return (
