@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.css";
+import "./SideBar.css";
 import Category from "./catagory/Catagory";
 import Price from "./price/Price";
 import { GiFishingBoat } from "react-icons/gi";
