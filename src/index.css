@@ -1,0 +1,91 @@
+/* Font import and reset (your original) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins","Noto Sans Khmer", sans-serif;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+
+/* Button styles (your original) */
+.btns {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  border: 0.6px solid #ccc;
+  margin-right: 6px;
+  color: #323232;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btns:hover {
+  background-color: #007bff; /* blue background */
+  color: white;              /* text color white */
+  border-color: #007bff;     /* border becomes blue */
+}
+
+.btns:active {
+  background-color: #0056b3; /* darker blue */
+  transform: scale(0.9);     /* slightly shrink for click effect */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* optional shadow */
+}
+
+/* ========== DARK MODE VARIABLES ========== */
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #f7f6f6;
+  --btn-bg: transparent;
+  --btn-border: #ccc;
+  --btn-text: #323232;
+}
+
+body.dark-mode {
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --card: #16202b;
+  --btn-bg: transparent;
+  --btn-border: #555;
+  --btn-text: #e6eef8;
+}
+
+/* Apply dark mode globally */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+/* Example for cards or containers that use bg */
+.card, .search-input, .nav, .product-container {
+  background-color: var(--card);
+  color: var(--text);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+/* Optional: buttons follow dark mode */
+.btns {
+  background-color: var(--btn-bg);
+  border: 0.6px solid var(--btn-border);
+  color: var(--btn-text);
+}
+
+
+

@@ -1,0 +1,42 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.icon a {
+  color: #555;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon a:hover {
+  transform: scale(1.5);
+}
+
+/* Each social icon gets its own color on hover */
+.icon a:nth-child(1):hover i { color: #ffffff; }   /* GitHub - dark */
+.icon a:nth-child(2):hover i { color: #0A66C2; }   /* LinkedIn - blue */
+.icon a:nth-child(3):hover i { color: #1DA1F2; }   /* Twitter - light blue */
+.icon a:nth-child(4):hover i { color: #0088cc; }   /* Telegram - sky blue */
+.icon a:nth-child(5):hover i { color: #1877F2; }   /* Facebook - blue */
+.icon a:nth-child(6):hover i { color: #ffffff; }   /* TikTok - black */
+.icon a:nth-child(7):hover i { color: #EA4335; }   /* Gmail - red */
+
+/* Optional background hover for soft effect */
+.icon a:hover i {
+
+
+ 
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive: smaller size on mobile */
+@media (max-width: 600px) {
+  .icon a {
+    font-size: 22px;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,132 @@
+/* ProductGallery.css - minimal polished styling */
+
+.pg-root { font-family: Arial, sans-serif; }
+
+/* item card (starter) */
+.item-card {
+  width: 260px;
+  border: 1px solid #eee;
+  padding: 12px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: left;
+  border-radius: 6px;
+}
+.item-card img { width: 100%; height: auto; border-radius: 4px; }
+.item-card h3 { font-size: 14px; margin: 8px 0 4px; }
+.price { color: #ff7a18; font-weight: 700; }
+
+/* Modal backdrop */
+.pg-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+/* Modal inner box */
+.pg-modal-inner {
+  width: 900px;
+  max-width: 96%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Close */
+.pg-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Gallery area */
+.pg-gallery {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Nav arrows */
+.pg-nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Main image wrapper */
+.pg-main-wrap {
+  width: 600px;
+  max-width: 62%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main image with fade */
+.pg-main {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 260ms ease;
+  border-radius: 6px;
+  cursor: pointer; /* clicking goes to next step */
+}
+.pg-main.loaded { opacity: 1; }
+
+/* step indicator (e.g., 2 / 4) */
+.pg-step {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* thumbnails */
+.pg-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pg-thumb {
+  border: 2px solid transparent;
+  padding: 3px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pg-thumb.active { border-color: #ff7a18; }
+.pg-thumb img { width: 84px; height: 56px; object-fit: cover; display:block; border-radius: 4px; }
+
+/* actions */
+.pg-actions {
+  margin-top: 14px;
+  display:flex;
+  gap: 10px;
+  justify-content: center;
+}
+.btn { padding: 8px 14px; border-radius: 6px; border: 1px solid #ccc; background: white; cursor: pointer; }
+.btn-primary { background: #ff7a18; color: white; border-color: #ff7a18; }
