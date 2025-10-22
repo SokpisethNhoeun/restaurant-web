@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "./navigation/Nav.jsx";
 import Product from "./product/Product.jsx";
-import Recommend from "./recommend/recommend.jsx";
+import Recommend from "./recommend/Recommend.jsx";
 import "./index.css";
 import SideBar from "./sildbar/SideBar.jsx";
 import { useState } from "react";
